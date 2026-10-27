@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Controle - Garoto do Frango</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap-ajustes.css">
+  <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <aside class="menu-lateral">
+      <img class="logo-menu" src="imagens/logo.png" alt="Logo do Garoto do Frango">
+
+      <nav class="menu-links">
+        <a href="inicio.html" class="link-menu ativo">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M3 11l9-8 9 8"></path>
+            <path d="M5 10v10h14V10"></path>
+          </svg>
+          Início
+        </a>
+        <a href="produtos.html" class="link-menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 8l-9-5-9 5 9 5 9-5z"></path>
+            <path d="M3 8v8l9 5 9-5V8"></path>
+            <path d="M12 13v8"></path>
+          </svg>
+          Produtos
+        </a>
+        <a href="movimentacoes.html" class="link-menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 8h16"></path>
+            <path d="M16 4l4 4-4 4"></path>
+            <path d="M20 16H4"></path>
+            <path d="M8 12l-4 4 4 4"></path>
+          </svg>
+          Movimentações
+        </a>
+      </nav>
+
+      <a href="index.html" class="link-menu sair">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+          <path d="M16 17l5-5-5-5"></path>
+          <path d="M21 12H9"></path>
+        </svg>
+        Sair
+      </a>
+    </aside>
+
+    <main class="conteudo">
+
+      <h1>Painel de Controle</h1>
+      <p class="saudacao">Olá, <span id="nome-usuario">Usuário</span>!</p>
+      <p class="subtitulo">Aqui está um resumo do estoque da Garoto do Frango.</p>
+
+      <section class="row g-3 mb-4">
+
+        <div class="col-6 col-lg-3">
+          <article class="cartao cartao-total h-100">
+            <span class="cartao-icone">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 8l-9-5-9 5 9 5 9-5z"></path>
+                <path d="M3 8v8l9 5 9-5V8"></path>
+              </svg>
+            </span>
+            <p class="cartao-numero" id="total-produtos">0</p>
+            <p class="cartao-texto">Total de produtos</p>
+          </article>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <article class="cartao cartao-normal h-100">
+            <span class="cartao-icone">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 8l-9-5-9 5 9 5 9-5z"></path>
+                <path d="M3 8v8l9 5 9-5V8"></path>
+              </svg>
+            </span>
+            <p class="cartao-numero" id="estoque-normal">0</p>
+            <p class="cartao-texto">Estoque normal</p>
+          </article>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <article class="cartao cartao-baixo h-100">
+            <span class="cartao-icone">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 3L2 21h20L12 3z"></path>
+                <path d="M12 10v4"></path>
+                <path d="M12 17.5v.5"></path>
+              </svg>
+            </span>
+            <p class="cartao-numero" id="estoque-baixo">0</p>
+            <p class="cartao-texto">Estoque baixo</p>
+          </article>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <article class="cartao cartao-movimentacoes h-100">
+            <span class="cartao-icone">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M4 8h16"></path>
+                <path d="M16 4l4 4-4 4"></path>
+                <path d="M20 16H4"></path>
+                <path d="M8 12l-4 4 4 4"></path>
+              </svg>
+            </span>
+            <p class="cartao-numero" id="movimentacoes-hoje">0</p>
+            <p class="cartao-texto">Movimentações hoje</p>
+          </article>
+        </div>
+
+      </section>
+
+      <section class="row g-3">
+
+
+        <div class="col-lg-7">
+          <div class="bloco h-100">
+            <div class="bloco-cabecalho">
+              <h2>Produtos com estoque baixo</h2>
+              <a href="produtos.html" class="ver-todos">Ver todos &rarr;</a>
+            </div>
+
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0 tabela">
+                <thead>
+                  <tr>
+                    <th>Produto</th>
+                    <th>Unidade</th>
+                    <th>Atual</th>
+                    <th>Mínimo</th>
+                    <th>Situação</th>
+                  </tr>
+                </thead>
+                <tbody id="tabela-estoque-baixo">
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+     
+        <div class="col-lg-5">
+          <div class="bloco h-100">
+            <div class="bloco-cabecalho">
+              <h2>Movimentações recentes</h2>
+              <a href="movimentacoes.html" class="ver-todos">Ver todos &rarr;</a>
+            </div>
+
+            <ul class="lista-movimentacoes" id="lista-movimentacoes">
+  
+            </ul>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+  </div>
+
+  <script src="dados.js"></script>
+  <script src="inicio.js"></script>
+</body>
+</html>

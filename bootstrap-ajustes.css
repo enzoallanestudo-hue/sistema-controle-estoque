@@ -1,0 +1,45 @@
+
+.btn-danger {
+  --bs-btn-bg: #d92332;
+  --bs-btn-border-color: #d92332;
+  --bs-btn-hover-bg: #b81d2a;
+  --bs-btn-hover-border-color: #b81d2a;
+  --bs-btn-active-bg: #b81d2a;
+  --bs-btn-active-border-color: #b81d2a;
+  --bs-btn-disabled-bg: #d92332;
+  --bs-btn-disabled-border-color: #d92332;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #d92332;
+  box-shadow: 0 0 0 3px rgba(217, 35, 50, 0.15);
+}
+
+
+.form-select {
+  padding-right: 2.25rem !important;
+}
+
+
+h1, h2, h3, p, ul, label {
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+.modal-caixa h2 {
+  font-size: 1.5rem;
+}
+
+
+.link-menu:hover {
+  color: #ffffff;
+}
+
+.ver-todos:hover,
+.voltar:hover {
+  color: #d92332;
+}

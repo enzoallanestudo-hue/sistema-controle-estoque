@@ -1,0 +1,202 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: #1a1a1a;
+}
+
+
+.so-leitor-de-tela {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+
+.tela-login {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+.painel-marca {
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  color: #ffffff;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.8)),
+    url("imagens/fundo.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.texto-marca {
+  margin-top: auto;
+  margin-bottom: 48px;
+}
+
+.texto-marca h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  max-width: 340px;
+  margin-bottom: 16px;
+}
+
+.texto-marca p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  max-width: 320px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.rodape-marca {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+
+.painel-login {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background-color: #f8f9fb;
+}
+
+.form-login {
+  width: 100%;
+  max-width: 420px;
+}
+
+.form-login h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.instrucao {
+  color: #64748b;
+  margin-bottom: 32px;
+}
+
+
+.grupo-campo {
+  margin-bottom: 16px;
+}
+
+.campo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 58px;
+  padding: 0 16px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+
+.campo:focus-within {
+  border-color: #d92332;
+  box-shadow: 0 0 0 3px rgba(217, 35, 50, 0.15);
+}
+
+
+.campo.com-erro {
+  border-color: #d92332;
+}
+
+.campo input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+}
+
+.icone {
+  flex-shrink: 0;
+  color: #334155;
+}
+
+.botao-olho {
+  display: flex;
+  border: none;
+  background: transparent;
+  color: #334155;
+  cursor: pointer;
+}
+
+
+.mensagem-erro {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #d92332;
+}
+
+.mensagem-sucesso {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  color: #15803d;
+  background-color: #dcfce7;
+}
+
+
+.mensagem-erro:empty,
+.mensagem-sucesso:empty {
+  display: none;
+}
+
+
+.botao-entrar {
+  width: 100%;
+  height: 56px;
+  margin-top: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #d92332;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.botao-entrar:hover {
+  background-color: #b81d2a;
+}
+
+
+@media (max-width: 800px) {
+  .tela-login {
+    flex-direction: column;
+  }
+
+  .painel-marca {
+    flex: none;
+    min-height: 320px;
+    padding: 24px;
+  }
+
+  .texto-marca {
+    margin-bottom: 24px;
+  }
+}
